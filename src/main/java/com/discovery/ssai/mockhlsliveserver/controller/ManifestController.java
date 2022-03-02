@@ -36,7 +36,8 @@ public class ManifestController {
 
     return ResponseEntity.ok()
         .contentType(MediaType.parseMediaType(contentType))
-        .header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "https://players.akamai.com")
+        .header(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN,
+            "https://bitmovin-players.dev-vod.h264.io")
         .header(
             HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + "master.m3u8" + "\"")
         .body(resource);
